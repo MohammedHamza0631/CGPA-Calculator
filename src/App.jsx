@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react'
+import React, { useState, useMemo } from 'react'
 import { Button, Input } from '@nextui-org/react'
 import NavbarMenu from './components/NavbarMenu'
 import { PlusIcon } from './components/PlusIcon'
@@ -9,6 +9,22 @@ function App () {
   const [semesters, setSemesters] = useState([
     { sgpa: '', credits: '', cgpa: '' }
   ])
+
+  const validateNumber = (value) => value.match(/^\d+(\.\d{1,3})?$/)
+  const sgValue = semesters[semesters.length - 1].sgpa
+
+  const isSgpaInvalid = useMemo(() => {
+    if (sgValue === '') return false
+
+    return validateNumber(sgValue) ? false : true
+  }, [sgValue])
+
+  const cValue = semesters[semesters.length - 1].credits
+  const isCreditInvalid = useMemo(() => {
+    if (cValue === '') return false
+
+    return validateNumber(cValue) ? false : true
+  }, [cValue])
 
   const handleSemChange = (e, index) => {
     const { name, value } = e.target
@@ -28,10 +44,10 @@ function App () {
       <div className=''>
         <NavbarMenu />
         <div className='main'>
-          <h1 className='text-center font-semibold font-sans mb-5'>
+          <h1 className='text-center font-poppins italic text-md lg:text-xl mb-5'>
             WHAT's MY CGPA!!
           </h1>
-          <div className='flex items-center justify-center flex-col bg-primary-200'>
+          <div className='flex items-center justify-center flex-col bg-primary-200 font-poppins'>
             <form>
               <div id='Sem'>
                 {semesters.map((sem, index) => (
@@ -51,24 +67,28 @@ function App () {
                     />
                     <Input
                       isRequired
-                      color='secondary'
                       size='lg'
                       name='sgpa'
                       step={0.01}
                       type='text'
                       variant='bordered'
                       label={`Semester G.P.A.`}
+                      isInvalid={isSgpaInvalid}
+                      color={isSgpaInvalid ? 'danger' : 'secondary'}
+                      errorMessage={isSgpaInvalid && 'SGPA must be a valid number'}
                       value={sem.sgpa}
                       onChange={e => handleSemChange(e, index)}
                     />
                     <Input
                       isRequired
-                      color='secondary'
                       size='lg'
                       name='credits'
                       type='text'
                       variant='bordered'
                       label={`Semester Credits`}
+                      isInvalid={isCreditInvalid}
+                      color={isCreditInvalid ? 'danger' : 'secondary'}
+                      errorMessage={isCreditInvalid && 'Credit must be a valid number'}
                       value={sem.credits}
                       onChange={e => handleSemChange(e, index)}
                     />
