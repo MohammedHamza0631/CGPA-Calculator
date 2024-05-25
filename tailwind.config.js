@@ -16,12 +16,12 @@ export default {
       themes: {
         light: {
           colors: {
-            primary: "#7828c8",
+            primary: "#995cd7",
           },
         },
         dark: {
           colors: {
-            primary: "#9353d3",
+            primary: "#995cd7",
           },
         },
       },

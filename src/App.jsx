@@ -1,40 +1,26 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import { Button, Input } from '@nextui-org/react'
 import NavbarMenu from './components/NavbarMenu'
 import { PlusIcon } from './components/PlusIcon'
+import calcCGPA from './utils/calcCGPA'
+import getCGPAColor from './utils/getCGPAColor'
 
 function App () {
   const [semesters, setSemesters] = useState([
-    { semester: '', sgpa: '', credits: '' }
+    { sgpa: '', credits: '', cgpa: '' }
   ])
-  const [cgpa, setCgpa] = useState(null)
-
-  const calculateCgpa = useCallback(() => {
-    let totalCredits = 0
-    let weightedGpaSum = 0
-    semesters.forEach(({ credits, sgpa }) => {
-      totalCredits += parseFloat(credits)
-      weightedGpaSum += parseFloat(credits) * parseFloat(sgpa)
-    })
-    const computedCgpa = weightedGpaSum / totalCredits
-    setCgpa(computedCgpa.toFixed(2))
-  }, [semesters])
 
   const handleSemChange = (e, index) => {
     const { name, value } = e.target
-    const newSemesters = semesters.map((sem, i) =>
+    const Allsemester = semesters.map((sem, i) =>
       i === index ? { ...sem, [name]: value } : sem
     )
-    setSemesters(newSemesters)
+
+    setSemesters(calcCGPA(Allsemester))
   }
 
   const handleAddSemester = () => {
-    setSemesters([...semesters, { semester: '', sgpa: '', credits: '' }])
-  }
-
-  const handleSubmit = event => {
-    event.preventDefault()
-    calculateCgpa()
+    setSemesters([...semesters, { sgpa: '', credits: '', cgpa: '' }])
   }
 
   return (
@@ -46,23 +32,22 @@ function App () {
             WHAT's MY CGPA!!
           </h1>
           <div className='flex items-center justify-center flex-col bg-primary-200'>
-            <form onSubmit={handleSubmit}>
+            <form>
               <div id='Sem'>
                 {semesters.map((sem, index) => (
                   <div
                     key={index}
-                    className='flex w-full flex-wrap md:flex-nowrap gap-4'
+                    className='mt-4 flex w-full flex-wrap md:flex-nowrap gap-4'
                   >
                     <Input
-                      isRequired
+                      isReadOnly
                       color='secondary'
                       name='semester'
                       size='lg'
                       type='text'
                       variant='bordered'
                       label={`Semester No.`}
-                      value={sem.semester}
-                      onChange={e => handleSemChange(e, index)}
+                      value={index + 1}
                     />
                     <Input
                       isRequired
@@ -70,7 +55,7 @@ function App () {
                       size='lg'
                       name='sgpa'
                       step={0.01}
-                      type='number'
+                      type='text'
                       variant='bordered'
                       label={`Semester G.P.A.`}
                       value={sem.sgpa}
@@ -81,11 +66,20 @@ function App () {
                       color='secondary'
                       size='lg'
                       name='credits'
-                      type='number'
+                      type='text'
                       variant='bordered'
                       label={`Semester Credits`}
                       value={sem.credits}
                       onChange={e => handleSemChange(e, index)}
+                    />
+                    <Input
+                      isReadOnly
+                      size='lg'
+                      name='cgpa'
+                      type='number'
+                      label={`C.G.P.A.`}
+                      value={sem.cgpa}
+                      color={getCGPAColor(parseFloat(sem.cgpa))}
                     />
                   </div>
                 ))}
@@ -99,17 +93,6 @@ function App () {
               >
                 Add Semester
               </Button>
-              <Button
-                type='submit'
-                color='secondary'
-                variant='shadow'
-                className='mt-4'
-              >
-                Calculate CGPA
-              </Button>
-              <div className='text-secondary'>
-                {cgpa && <h2>CGPA: {cgpa}</h2>}
-              </div>
             </form>
           </div>
         </div>
