@@ -10,13 +10,19 @@
   overflow-x: hidden;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .main {
   padding: 10px;
   max-width: 960px;
   margin: 0 auto;
 }
 
-.poppins-title{
+.poppins-title {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: xx-large;
@@ -27,8 +33,7 @@
   font-weight: 400;
   font-size: medium;
   font-style: italic;
-
 }
-.font-poppins{
+.font-poppins {
   font-family: "Poppins", sans-serif;
 }
