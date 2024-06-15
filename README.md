@@ -1,8 +1,106 @@
-# React + Vite
+# CGPA Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![GitHub issues](https://img.shields.io/github/issues/MohammedHamza0631/CGPA-Calculator)](https://github.com/MohammedHamza0631/CGPA-Calculator/issues)
+[![GitHub forks](https://img.shields.io/github/forks/MohammedHamza0631/CGPA-Calculator)](https://github.com/MohammedHamza0631/CGPA-Calculator/network)
+[![GitHub stars](https://img.shields.io/github/stars/MohammedHamza0631/CGPA-Calculator)](https://github.com/MohammedHamza0631/CGPA-Calculator/stargazers)
+[![GitHub license](https://img.shields.io/github/license/MohammedHamza0631/CGPA-Calculator)](https://github.com/MohammedHamza0631/CGPA-Calculator/blob/main/LICENSE)
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Live Link](#live-link)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+
+## Introduction
+
+The CGPA Calculator is a simple and intuitive tool designed to help students calculate their CGPA accurately. By entering your SGPA and credits for each semester, you can get an instant calculation of your CGPA.
+
+## Features
+
+- Instant calculation of CGPA
+- Intuitive and user-friendly interface
+- Responsive design
+- Real-time validation for input fields
+
+## Technologies Used
+
+- React
+- NextUI for styling
+- Tailwind CSS
+- JavaScript
+
+
+## Live Link
+
+You can access the Live project [here](https://cgpa-calculator-main.vercel.app/).
+
+
+<h1 id="introduction">Installation</h1>
+
+To get started with the CGPA Calculator, follow these steps:
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/MohammedHamza0631/CGPA-Calculator.git
+    cd CGPA-Calculator
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3. **Run the application:**
+
+    ```bash
+    npm start
+    ```
+
+    The application will be available at `http://localhost:5173`.
+
+## Usage
+
+1. Open the application in your browser.
+2. Enter your Semester GPA (SGPA) and Credits for each semester.
+3. The CGPA will be calculated and displayed instantly.
+4. Click "Add Semester" to add more semesters.
+
+![image](https://github.com/MohammedHamza0631/CGPA-Calculator/assets/91896151/686baaa7-2ae8-44fd-b9cd-7a0ff8573701)
+
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-branch-name`.
+3. Make your changes and commit them: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature-branch-name`.
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+This tool was developed by Mohammed Hamza, a passionate software developer with a keen interest in educational tools and applications. You can find more about his work and projects on his GitHub.
+
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-informational?style=flat&logo=github&logoColor=white&color=0072b1)](https://github.com/MohammedHamza0631)
+
+## Contact
+
+If you have any questions or feedback, feel free to reach out to me at [your-email@example.com](mailto:your-email@example.com).
+
+---
+
+Happy calculating! 😊
