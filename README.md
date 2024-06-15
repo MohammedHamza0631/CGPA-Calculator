@@ -15,7 +15,6 @@
 - [Live Link](#live-link)
 - [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 ## Introduction
@@ -91,15 +90,10 @@ Contributions are welcome! Please follow these steps to contribute:
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Acknowledgements
-
-This tool was developed by Mohammed Hamza, a passionate software developer with a keen interest in educational tools and applications. You can find more about his work and projects on his GitHub.
-
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-informational?style=flat&logo=github&logoColor=white&color=0072b1)](https://github.com/MohammedHamza0631)
 
 ## Contact
 
-If you have any questions or feedback, feel free to reach out to me at [your-email@example.com](mailto:your-email@example.com).
+If you have any questions or feedback, feel free to reach out to me at [211220035@nitdelhi.ac.in](mailto:211220035@nitdelhi.ac.in).
 
 ---
 
