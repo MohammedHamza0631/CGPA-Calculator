@@ -1,10 +1,9 @@
 # CGPA Calculator
 
 [![GitHub issues](https://img.shields.io/github/issues/MohammedHamza0631/CGPA-Calculator)](https://github.com/MohammedHamza0631/CGPA-Calculator/issues)
-[![GitHub forks](https://img.shields.io/github/forks/MohammedHamza0631/CGPA-Calculator)](https://github.com/MohammedHamza0631/CGPA-Calculator/network)
-[![GitHub stars](https://img.shields.io/github/stars/MohammedHamza0631/CGPA-Calculator)](https://github.com/MohammedHamza0631/CGPA-Calculator/stargazers)
-[![GitHub license](https://img.shields.io/github/license/MohammedHamza0631/CGPA-Calculator)](https://github.com/MohammedHamza0631/CGPA-Calculator/blob/main/LICENSE)
-
+[![GitHub Forks](https://img.shields.io/github/forks/MohammedHamza0631/CGPA-Calculator.svg?style=social&label=Forks&maxAge=2592000)](https://github.com/MohammedHamza0631/CGPA-Calculator/network)
+[![GitHub Stars](https://img.shields.io/github/stars/MohammedHamza0631/CGPA-Calculator.svg?style=social&label=Stars&maxAge=2592000)](https://github.com/MohammedHamza0631/CGPA-Calculator/stargazers)
+![License](https://img.shields.io/badge/license-MIT-green)
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -15,7 +14,6 @@
 - [Live Link](#live-link)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
 
 ## Introduction
 
@@ -89,11 +87,6 @@ Contributions are welcome! Please follow these steps to contribute:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
-## Contact
-
-If you have any questions or feedback, feel free to reach out to me at [211220035@nitdelhi.ac.in](mailto:211220035@nitdelhi.ac.in).
 
 ---
 
