@@ -20,6 +20,15 @@ function NavbarMenu () {
           </p>
         </NavbarBrand>
         <NavbarContent className=' sm:flex gap-4' justify='center'>
+        <NavbarItem>
+            <NavLink
+              className='font-poppins font-semibold text-sm lg:text-lg italic hover:bg-slate-500 hover:rounded-lg p-2 transition-all duration-300'
+              color='foreground'
+              to='/dashboard'
+            >
+              Dashboard
+            </NavLink>
+          </NavbarItem>
           <NavbarItem>
             <NavLink
               className='font-poppins font-semibold text-sm lg:text-lg italic hover:bg-slate-500 hover:rounded-lg p-2 transition-all duration-300'
